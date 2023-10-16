@@ -18,7 +18,7 @@ pipeline {
 		stage('build') {
             steps {
                 
-		sh '/home/ec2-user/game-of-life'
+		sh '/home/ec2-user/game-of-life/'
 	
             }
         }
