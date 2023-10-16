@@ -11,15 +11,17 @@ pipeline {
             steps {
 		sh '''
             git clone https://github.com/shantanuvaidya27/game-of-life.git
-	   cd game-of-life
+	   cd game-of-life 
 		'''		
             }
         }
 		stage('build') {
             steps {
                 
-		sh '/home/ec2-user/game-of-life/'
-	
+		sh '''
+                cd /home/ec2-user/game-of-life/
+	           mvn clean install
+                   '''
             }
         }
         stage('Deploy') {
